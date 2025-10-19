@@ -1,0 +1,153 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to {{companyName}} on OneClarity</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family:
+        -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', sans-serif;
+      background-color: #f7f7f8;
+      display:
+        flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 60px;
+    }
+
+    h1 {
+      font-size: 40px;
+      font-weight: 400;
+      color: #000;
+      margin-bottom: 32px;
+      line-height: 1.2;
+    }
+
+    .description {
+      color: #6e6e80;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .description p {
+      margin-bottom:
+        16px;
+    }
+
+    .description p:last-child {
+      margin-bottom: 0;
+    }
+
+    .button-container {
+      margin-bottom: 32px;
+    }
+
+    .invite-button {
+      background-color: #000;
+      color:
+        #fff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 24px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .invite-button:hover {
+      background-color: #2d2d2d;
+    }
+
+    .footer-note {
+      color: #6e6e80;
+      font-size:
+        12px;
+      line-height: 1.6;
+      margin-bottom: 48px;
+    }
+
+    .footer-note a {
+      color:
+        #6e6e80;
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .footer-note a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      color: #6e6e80;
+      font-size: 12px;
+      line-height: 1.5;
+      padding-top: 24px;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    .footer p {
+      margin-bottom: 4px;
+    }
+
+    .footer p:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <button style="border-radius: 150px; border: 1px solid black; margin-bottom: 150px; padding: 4px;"><a
+        style="text-decoration: none;" href="/">Back</a></button>
+    <div class="logo">OneClarity</div>
+
+    <h1>Welcome to CompanyName</h1>
+
+    <div class="description">
+      <p>You've been invited to join this workspace.</p>
+
+      <p>Click the link below to accept your invite (valid for 48 hours):</p>
+    </div>
+
+    <div class="button-container">
+      <a href="{{inviteLink}}" class="invite-button">Accept Invitation</a>
+    </div>
+
+    <div class="footer-note">
+      If the button doesn't work, copy and paste this link:
+      <a href="{{inviteLink}}">https://corp.oneclarity.ai/</a>
+    </div>
+
+    <div class="footer">
+      <p>&copy; {{companyName}}. All rights reserved.</p>
+      <p>This is an automated message from OneClarity Communication Hub</p>
+    </div>
+  </div>
+</body>
+
+</html>

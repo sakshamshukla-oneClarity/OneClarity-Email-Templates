@@ -1,0 +1,185 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Completed</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family:
+        -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', sans-serif;
+      background-color: #f7f7f8;
+      display:
+        flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 60px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom:
+        32px;
+    }
+
+    .icon {
+      font-size: 32px;
+    }
+
+    h1 {
+      font-size: 40px;
+      font-weight: 400;
+      color: #000;
+      line-height: 1.2;
+    }
+
+    .greeting {
+      font-size: 20px;
+      font-weight:
+        400;
+      color: #000;
+      margin-bottom: 24px;
+    }
+
+    .message-box {
+      background-color:
+        #f0f0f0;
+      border-left: 4px solid #000;
+      padding: 24px 20px;
+      margin-bottom:
+        32px;
+      border-radius: 2px;
+    }
+
+    .message-box p {
+      color: #6e6e80;
+      font-size:
+        14px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .message-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .employee-name {
+      color: #000;
+      font-weight: 600;
+    }
+
+    .task-quote {
+      margin: 16px 0;
+      padding-left: 16px;
+      border-left: 2px solid #6e6e80;
+      color: #000;
+      font-size: 14px;
+      font-style: italic;
+    }
+
+    .button-container {
+      margin-bottom: 32px;
+    }
+
+    .login-button {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 24px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      text-decoration: none;
+      display:
+        inline-block;
+    }
+
+    .login-button:hover {
+      background-color: #2d2d2d;
+    }
+
+    .footer-note {
+      color: #6e6e80;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .footer-note a {
+      color: #6e6e80;
+      text-decoration: none;
+      word-break:
+        break-all;
+    }
+
+    .footer-note a:hover {
+      text-decoration: underline;
+    }
+
+    .signature {
+      margin-top: 24px;
+      color: #6e6e80;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <button style="border-radius: 150px; border: 1px solid black; margin-bottom: 150px; padding: 4px;"><a
+        style="text-decoration: none;" href="/">Back</a></button>
+    <div class="logo">OneClarity</div>
+
+    <div class="header">
+      <h1>Task Completed</h1>
+    </div>
+
+    <div class="greeting">Hello Yash,</div>
+
+    <div class="message-box">
+      <p>Your team member
+        <span class="employee-name">Saksham</span>
+        just completed:
+      </p>
+      <div class="task-quote">TaskTitle</div>
+      <p>Keep up the great work!</p>
+    </div>
+
+    <div class="button-container">
+      <a href="https://corp.oneclarity.ai/" class="login-button">View in
+        OneClarity Portal</a>
+    </div>
+
+    <div class="footer-note">
+      If the button doesn't work, copy and paste this link:
+      <a href="https://corp.oneclarity.ai/">https://corp.oneclarity.ai/</a>
+
+      <div class="signature">– The OneClarity Team</div>
+    </div>
+  </div>
+</body>
+
+</html>

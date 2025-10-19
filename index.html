@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>OneClarity Email Templates Preview</title>
+    <style>
+        :root {
+            --bg: #fff;
+            --fg: #000;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background: var(--bg);
+            color: var(--fg);
+            padding: 2rem;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+
+        nav.navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            background: var(--bg);
+            border: 1px solid var(--fg);
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+            position: relative;
+        }
+
+        .brand {
+            font-weight: 700;
+            letter-spacing: 0.2px;
+            font-size: 1rem;
+            padding-left: 0.5rem;
+        }
+
+
+        ul.menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            top: calc(100% + 0.6rem);
+            flex-direction: column;
+            gap: 0.4rem;
+            background: var(--bg);
+            padding: 0.6rem;
+            border-radius: 10px;
+            border: 1px solid var(--fg);
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            transform-origin: top;
+            transition: max-height .28s ease, opacity .28s ease, transform .28s ease;
+            box-shadow: 0 14px 36px rgba(0, 0, 0, 0.06);
+            z-index: 60;
+        }
+
+        ul.menu.open {
+            max-height: 1000px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        ul.menu li a {
+            display: block;
+
+            text-decoration: none;
+            color: var(--fg);
+            padding: 0.45rem 0.8rem;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            font-size: 0.92rem;
+            transition: background .18s ease, color .18s ease, transform .12s ease;
+            white-space: nowrap;
+
+        }
+
+        ul.menu li a:hover,
+        ul.menu li a:focus {
+            background: var(--fg);
+            color: var(--bg);
+            transform: translateY(-1px);
+            box-shadow: inset 0 0 0 1px var(--fg);
+        }
+
+
+        button.menu-toggle {
+            display: block;
+            background: transparent;
+            border: 1px solid var(--fg);
+            padding: 0.45rem 0.8rem;
+            border-radius: 999px;
+            font-size: 0.92rem;
+            cursor: pointer;
+            transition: background .18s ease, color .18s ease;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            background: var(--fg);
+            color: var(--bg);
+        }
+
+
+        button.hamburger {
+            display: none;
+            background: transparent;
+            border: 0;
+            padding: 0.35rem;
+            margin-left: 0.25rem;
+            cursor: pointer;
+        }
+
+        .hamburger .bar {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--fg);
+            margin: 4px 0;
+            transition: transform .18s ease, opacity .18s ease;
+        }
+
+
+        @media (max-width: 720px) {
+            nav.navbar {
+                padding: 0.4rem 0.6rem;
+            }
+
+            button.menu-toggle {
+                display: none;
+
+            }
+
+            button.hamburger {
+                display: block;
+
+            }
+        }
+
+
+        @media (min-width: 721px) {
+            ul.menu {
+                right: auto;
+
+                left: unset;
+                top: calc(100% + 0.6rem);
+                min-width: 200px;
+
+            }
+        }
+
+
+        a:focus,
+        button:focus {
+            outline: 3px solid var(--fg);
+            outline-offset: 4px;
+        }
+
+
+        main {
+            margin-top: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar" role="navigation" aria-label="Email templates navigation">
+            <div class="brand">OneClarity</div>
+
+            <button class="menu-toggle" aria-controls="site-menu" aria-expanded="false" aria-label="Toggle menu">
+                Select Template
+            </button>
+
+            <button class="hamburger" aria-controls="site-menu" aria-expanded="false" aria-label="Toggle menu">
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+            </button>
+
+            <ul class="menu" id="site-menu">
+                <li><a href="/achievementUnlock.html">achievementUnlock</a></li>
+                <li><a href="/announcement.html">announcement</a></li>
+                <li><a href="/employeeFirstLoginManager.html">employeeFirstLoginManager</a></li>
+                <li><a href="/InformManagerUponQuizCompletionEmail.html">InformManagerUponQuizCompletionEmail</a></li>
+                <li><a
+                        href="/InfromManagerUponlearningPathCompletionEmail.html">InfromManagerUponlearningPathCompletionEmail</a>
+                </li>
+                <li><a href="/index.html">invite</a></li>
+                <li><a href="inviteAccepted.html">inviteAccepted</a></li>
+                <li><a href="/learningPathAssigned.html">learningPathAssigned</a></li>
+                <li><a href="/newSkillAssignment.html">newSkillAssignment</a></li>
+                <li><a href="/otp.html">otp</a></li>
+                <li><a href="/quizCompletionEmail.html">quizCompletionEmail</a></li>
+                <li><a href="/quizRetakeEmail.html">quizRetakeEmail</a></li>
+                <li><a href="/taskCompleted.html">taskCompleted</a></li>
+                <li><a href="/taskReminder.html">taskReminder</a></li>
+                <li><a href="/taskReminderSummary.html">taskReminderSummary</a></li>
+                <li><a href="/teamJoin.html">teamJoin</a></li>
+                <li><a href="/welcomeEmployee.html">welcomeEmployee</a></li>
+                <li><a href="/welcomeManager.html">welcomeManager</a></li>
+            </ul>
+        </nav>
+
+        <main>
+
+        </main>
+    </div>
+
+    <script>
+
+        (function () {
+            const hamburger = document.querySelector('.hamburger');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const menu = document.getElementById('site-menu');
+
+            if (!menu) return;
+
+
+            if (hamburger) {
+                hamburger.addEventListener('click', () => {
+                    const isOpen = menu.classList.toggle('open');
+                    hamburger.setAttribute('aria-expanded', String(isOpen));
+                });
+            }
+
+
+            if (menuToggle) {
+                menuToggle.addEventListener('click', () => {
+                    const isOpen = menu.classList.toggle('open');
+                    menuToggle.setAttribute('aria-expanded', String(isOpen));
+                    isOpen ? menuToggle.textContent = "x" : menuToggle.textContent = "Select Template"
+                });
+            }
+
+
+            menu.addEventListener('click', (e) => {
+                if (e.target.tagName.toLowerCase() === 'a' && menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+                    if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+                }
+
+            });
+
+
+            document.addEventListener('keydown', (e) => {
+
+                if (e.key === 'Escape' && menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    if (menuToggle) menuToggle.textContent = "Select Template";
+                    if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+                    if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>
