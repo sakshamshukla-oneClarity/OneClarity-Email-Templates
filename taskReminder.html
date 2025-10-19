@@ -167,14 +167,18 @@
 
 <body>
   <div class="container">
-    <button style="border-radius: 150px; border: 1px solid black; margin-bottom: 150px; padding: 4px;"><a
-        style="text-decoration: none;" href="/">Back</a></button>
+
+    <button style="border-radius: 150px; border: 1px solid black; margin-bottom: 1px; padding: 4px;">
+      <a style="text-decoration: none;" href="/">Back</a>
+    </button>
+
+
     <div class="logo">OneClarity</div>
 
     <div class="header">
       <span class="icon">{{#if
         (eq reminderType "today")
-        }}🕒{{else}}{{/if}}</span>
+        }} {{else}}{{/if}}</span>
       <h1>{{#if (eq reminderType "today")}}Task Due Today{{else}}Upcoming Task{{/if}}</h1>
     </div>
 
