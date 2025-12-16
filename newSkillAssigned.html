@@ -1,0 +1,178 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OneClarity - New Skill Assigned</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family:
+                -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', sans-serif;
+            background-color: #f7f7f8;
+            display:
+                flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 400;
+            color: #000;
+            margin-bottom: 32px;
+            line-height: 1.2;
+        }
+
+        .message-box {
+            background-color: #f0f0f0;
+            border-left:
+                4px solid #000;
+            padding: 16px 20px;
+            margin-bottom: 32px;
+            color: #2d2d2d;
+            font-size: 14px;
+            line-height: 1.6;
+            border-radius: 2px;
+        }
+
+        .details {
+            margin-bottom: 32px;
+        }
+
+        .detail-row {
+            display: flex;
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: #6e6e80;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            width: 120px;
+            color: #6e6e80;
+        }
+
+        .detail-value {
+            color: #2d2d2d;
+        }
+
+        .detail-value strong {
+            color: #000;
+            font-weight: 600;
+        }
+
+        .button-container {
+            margin-bottom: 32px;
+        }
+
+        .chat-button {
+            background-color: #000;
+            color:
+                #fff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 24px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .chat-button:hover {
+            background-color: #2d2d2d;
+        }
+
+        .footer-note {
+            color: #6e6e80;
+            font-size:
+                12px;
+            line-height: 1.6;
+        }
+
+        .footer-note a {
+            color: #6e6e80;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .footer-note a:hover {
+            text-decoration: underline;
+        }
+
+        .signature {
+            margin-top: 20px;
+            font-size:
+                14px;
+            color: #2d2d2d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">OneClarity</div>
+
+        <h1>New Skill Assigned</h1>
+
+        <div class="message-box">
+            <p>Hi {{userName}},</p>
+            <p><strong>{{assignedByName}}</strong>
+                thinks you're ready for something new. They've just assigned
+                <strong>{{learningPathTitle}}</strong>
+                to your learning path.
+            </p>
+            <p>This isn't just another skill—it's designed to enhance how you work
+                and help you overcome challenges.</p>
+            <p>Ready to level up? Start now.</p>
+        </div>
+
+        <div class="details">
+            <div class="detail-row">
+                <div class="detail-label">Assigned by:</div>
+                <div class="detail-value"><strong>{{assignedByName}}</strong></div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Skill:</div>
+                <div class="detail-value"><strong>{{learningPathTitle}}</strong></div>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <a href="https://oneclarity.ai/" class="chat-button">Start Learning Now</a>
+        </div>
+
+        <div class="footer-note">
+            If the button doesn't work, copy and paste this link:
+            <a href="https://oneclarity.ai/">https://oneclarity.ai/</a>
+        </div>
+
+        <div class="signature">
+            – The OneClarity Team
+        </div>
+    </div>
+</body>
+
+</html>

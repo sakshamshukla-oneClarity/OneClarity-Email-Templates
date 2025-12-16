@@ -1,0 +1,158 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OneClarity - Pending Learning Steps</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family:
+                -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', sans-serif;
+            background-color: #f7f7f8;
+            display:
+                flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 400;
+            color: #000;
+            margin-bottom: 32px;
+            line-height: 1.2;
+        }
+
+        .message-box {
+            background-color: #f0f0f0;
+            border-left:
+                4px solid #000;
+            padding: 16px 20px;
+            margin-bottom: 32px;
+            color: #2d2d2d;
+            font-size: 14px;
+            line-height: 1.6;
+            border-radius: 2px;
+        }
+
+        .message-box ul {
+            margin: 16px 0;
+            padding-left: 20px;
+        }
+
+        .message-box li {
+            margin-bottom:
+                8px;
+        }
+
+        .message-box li:last-child {
+            margin-bottom: 0;
+        }
+
+        .button-container {
+            margin-bottom: 32px;
+        }
+
+        .chat-button {
+            background-color: #000;
+            color:
+                #fff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 24px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .chat-button:hover {
+            background-color: #2d2d2d;
+        }
+
+        .footer-note {
+            color: #6e6e80;
+            font-size:
+                12px;
+            line-height: 1.6;
+        }
+
+        .footer-note a {
+            color: #6e6e80;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .footer-note a:hover {
+            text-decoration: underline;
+        }
+
+        .signature {
+            margin-top: 20px;
+            font-size:
+                14px;
+            color: #2d2d2d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">OneClarity</div>
+
+        <h1>Pending Learning Steps</h1>
+
+        <div class="message-box">
+            <p>Hey {{userName}},</p>
+            <p>You have some learning steps waiting to be started:</p>
+
+            <ul>
+                {{#each pendingTasks}}
+                <li>
+                    <strong>{{title}}</strong> ({{skillName}})
+                </li>
+                {{/each}}
+            </ul>
+
+            <p>Kickstart them today and keep your progress streak alive!</p>
+        </div>
+
+        <div class="button-container">
+            <a href="https://oneclarity.ai" class="chat-button">Start Now →</a>
+        </div>
+
+        <div class="footer-note">
+            If the button doesn't work, copy and paste this link:
+            <a href="https://oneclarity.ai">https://oneclarity.ai</a>
+        </div>
+
+        <div class="signature">
+            — The OneClarity Team
+        </div>
+    </div>
+</body>
+
+</html>

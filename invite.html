@@ -122,11 +122,9 @@
 
 <body>
   <div class="container">
-    <button style="border-radius: 150px; border: 1px solid black; margin-bottom: 150px; padding: 4px;"><a
-        style="text-decoration: none;" href="/">Back</a></button>
     <div class="logo">OneClarity</div>
 
-    <h1>Welcome to CompanyName</h1>
+    <h1>Welcome to {{companyName}}</h1>
 
     <div class="description">
       <p>You've been invited to join this workspace.</p>
@@ -140,7 +138,7 @@
 
     <div class="footer-note">
       If the button doesn't work, copy and paste this link:
-      <a href="{{inviteLink}}">https://corp.oneclarity.ai/</a>
+      <a href="{{inviteLink}}">{{inviteLink}}</a>
     </div>
 
     <div class="footer">

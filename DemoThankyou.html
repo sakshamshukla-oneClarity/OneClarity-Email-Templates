@@ -1,0 +1,189 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OneClarity - Thank You for Booking a Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family:
+                -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', sans-serif;
+            background-color: #f7f7f8;
+            display:
+                flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 400;
+            color: #000;
+            margin-bottom: 32px;
+            line-height: 1.2;
+        }
+
+        .message-box {
+            background-color: #f0f0f0;
+            border-left:
+                4px solid #000;
+            padding: 16px 20px;
+            margin-bottom: 32px;
+            color: #2d2d2d;
+            font-size: 14px;
+            line-height: 1.6;
+            border-radius: 2px;
+        }
+
+        .details {
+            margin-bottom: 32px;
+        }
+
+        .detail-row {
+            display: flex;
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: #6e6e80;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            width: 120px;
+            color: #6e6e80;
+        }
+
+        .detail-value {
+            color: #2d2d2d;
+        }
+
+        .detail-value a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .detail-value a:hover {
+            text-decoration: underline;
+        }
+
+        .button-container {
+            margin: 32px 0;
+            text-align: center;
+        }
+
+        .chat-button {
+            background-color: #000;
+            color:
+                #fff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 24px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .chat-button:hover {
+            background-color: #2d2d2d;
+        }
+
+        .footer-note {
+            color: #6e6e80;
+            font-size:
+                12px;
+            line-height: 1.6;
+            margin-top: 32px;
+        }
+
+        .signature {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #2d2d2d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">OneClarity</div>
+
+        <h1>Thank You for Reaching Out, {{firstName}}!</h1>
+
+        <div class="message-box">
+            <p>We’ve received your demo request for <strong>OneClarity</strong> and we’re thrilled to connect with you
+                soon!</p>
+            <p style="margin-top: 16px;">Here’s a quick summary of your submission:</p>
+        </div>
+
+        <div class="details">
+            <div class="detail-row">
+                <div class="detail-label">Name:</div>
+                <div class="detail-value">{{firstName}} {{lastName}}</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Email:</div>
+                <div class="detail-value">
+                    <a href="mailto:{{email}}">{{email}}</a>
+                </div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Company:</div>
+                <div class="detail-value">{{companyName}}</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Job Title:</div>
+                <div class="detail-value">{{jobTitle}}</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Country:</div>
+                <div class="detail-value">{{country}}</div>
+            </div>
+        </div>
+
+        <div class="message-box">
+            <p>One of our specialists will reach out to you shortly to schedule a personalized demo and walk you through
+                how OneClarity can help your team move <strong>faster and smarter.</strong></p>
+            <p style="margin-top: 16px;">If you have any immediate questions, just reply to this email or contact us at
+                <a href="mailto:mentor@oneclarity.ai">mentor@oneclarity.ai</a>.</p>
+        </div>
+
+        <div class="button-container">
+            <a href="https://oneclarity.ai" class="chat-button">Visit OneClarity</a>
+        </div>
+
+        <div class="footer-note">
+            If the button doesn't work, copy and paste this link:
+            <a href="https://oneclarity.ai">https://oneclarity.ai</a>
+        </div>
+
+        <div class="signature">
+            Warm regards,<br />
+            <strong>The OneClarity Team</strong>
+        </div>
+    </div>
+</body>
+
+</html>
