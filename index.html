@@ -59,13 +59,14 @@
             left: 10px;
             right: 10px;
             top: calc(100% + 0.6rem);
+            display: flex;
             flex-direction: column;
             gap: 0.4rem;
             background: var(--bg);
             padding: 0.6rem;
             border-radius: 10px;
             border: 1px solid var(--fg);
-            overflow: hidden;
+            overflow-y: auto;
             max-height: 0;
             opacity: 0;
             transform-origin: top;
@@ -75,14 +76,17 @@
         }
 
         ul.menu.open {
-            max-height: 1000px;
+            max-height: 600px;
             opacity: 1;
             transform: translateY(0);
         }
 
+        ul.menu li {
+            flex-shrink: 0;
+        }
+
         ul.menu li a {
             display: block;
-
             text-decoration: none;
             color: var(--fg);
             padding: 0.45rem 0.8rem;
@@ -91,7 +95,6 @@
             font-size: 0.92rem;
             transition: background .18s ease, color .18s ease, transform .12s ease;
             white-space: nowrap;
-
         }
 
         ul.menu li a:hover,
@@ -147,12 +150,10 @@
 
             button.menu-toggle {
                 display: none;
-
             }
 
             button.hamburger {
                 display: block;
-
             }
         }
 
@@ -160,11 +161,9 @@
         @media (min-width: 721px) {
             ul.menu {
                 right: auto;
-
                 left: unset;
                 top: calc(100% + 0.6rem);
                 min-width: 200px;
-
             }
         }
 
@@ -178,6 +177,20 @@
 
         main {
             margin-top: 1.5rem;
+            padding: 2rem;
+            background: #f5f5f5;
+            border-radius: 12px;
+            min-height: 400px;
+        }
+
+        main h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        main p {
+            font-size: 1.1rem;
+            color: #666;
         }
 
         .new-tag {
@@ -193,6 +206,7 @@
             color: #000;
             background: #fff;
             line-height: 1.2;
+            vertical-align: middle;
         }
     </style>
 </head>
@@ -233,41 +247,34 @@
                 <li><a href="/teamJoin.html">teamJoin</a></li>
                 <li><a href="/welcomeEmployee.html">welcomeEmployee</a></li>
                 <li><a href="/welcomeManager.html">welcomeManager</a></li>
-                <li>
-                    <a href="/bookdemo.html">
-                        Book Demo <span class="new-tag">New</span>
-                    </a>
-                </li>
-
-                <li><a href="/dailyAnalyticsReport.html">Daily Analytics Report <span class="new-tag">New</span></a>
-                </li>
-                <li><a href="/DemoThankyou.html">Demo ThankYou <span class="new-tag">New</span></a></li>
-                <li><a href="/employeeInactiveNotice.html">Inactivity notice employee <span
-                            class="new-tag">New</span></a></li>
-                <li><a href="/employeeLevelUpManager.html">Employee Level Up <span class="new-tag">New</span></a></li>
-                <li><a href="/levelUpCongrats.html">Level Up <span class="new-tag">New</span></a></li>
-                <li><a href="/taskNotStartedReminder.html">Task not started <span class="new-tag">New</span></a></li>
-                <li><a href="/userFeedbackThankYou.html">Feedback Thankyou <span class="new-tag">New</span></a></li>
-                <li><a href="/userInactiveReminder.html">User Inactive Reminder <span class="new-tag">New</span></a>
-                </li>
-
+                <li><a href="/bookdemo.html">Book Demo</a></li>
+                <li><a href="/dailyAnalyticsReport.html">Daily Analytics Report</a></li>
+                <li><a href="/DemoThankyou.html">Demo ThankYou</a></li>
+                <li><a href="/employeeInactiveNotice.html">Inactivity notice employee</a></li>
+                <li><a href="/employeeLevelUpManager.html">Employee Level Up</a></li>
+                <li><a href="/levelUpCongrats.html">Level Up</a></li>
+                <li><a href="/taskNotStartedReminder.html">Task not started</a></li>
+                <li><a href="/userFeedbackThankYou.html">Feedback Thankyou</a></li>
+                <li><a href="/userInactiveReminder.html">User Inactive Reminder</a></li>
+                <li><a href="/solution_submitted.html">Solution Submitted <span class="new-tag">New</span></a></li>
+                <li><a href="/solution_accepted.html">Solution Accepted <span class="new-tag">New</span></a></li>
+                <li><a href="/solution_rejected.html">Solution Rejected <span class="new-tag">New</span></a></li>
             </ul>
         </nav>
 
         <main>
-
+            <h1>Welcome to OneClarity Email Templates</h1>
+            <p>Select a template from the menu above to preview it.</p>
         </main>
     </div>
 
     <script>
-
         (function () {
             const hamburger = document.querySelector('.hamburger');
             const menuToggle = document.querySelector('.menu-toggle');
             const menu = document.getElementById('site-menu');
 
             if (!menu) return;
-
 
             if (hamburger) {
                 hamburger.addEventListener('click', () => {
@@ -276,28 +283,26 @@
                 });
             }
 
-
             if (menuToggle) {
                 menuToggle.addEventListener('click', () => {
                     const isOpen = menu.classList.toggle('open');
                     menuToggle.setAttribute('aria-expanded', String(isOpen));
-                    isOpen ? menuToggle.textContent = "x" : menuToggle.textContent = "Select Template"
+                    menuToggle.textContent = isOpen ? "x" : "Select Template";
                 });
             }
-
 
             menu.addEventListener('click', (e) => {
                 if (e.target.tagName.toLowerCase() === 'a' && menu.classList.contains('open')) {
                     menu.classList.remove('open');
                     if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
-                    if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+                    if (menuToggle) {
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                        menuToggle.textContent = "Select Template";
+                    }
                 }
-
             });
 
-
             document.addEventListener('keydown', (e) => {
-
                 if (e.key === 'Escape' && menu.classList.contains('open')) {
                     menu.classList.remove('open');
                     if (menuToggle) menuToggle.textContent = "Select Template";

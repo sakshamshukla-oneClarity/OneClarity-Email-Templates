@@ -1,0 +1,157 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Solution Has Been Accepted - Onelarity</title>
+    <style>
+        /* Same styles as above — copied for completeness */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            padding: 50px 40px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 34px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 36px;
+            letter-spacing: -0.5px;
+            text-align: left;
+        }
+
+        .banner {
+            background-color: #e0e0e0;
+            padding: 20px;
+            margin-bottom: 36px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .banner img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .greeting {
+            font-size: 32px;
+            color: #1a1a1a;
+            margin-bottom: 28px;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            text-align: left;
+        }
+
+        .content {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 32px;
+            text-align: left;
+        }
+
+        .content b {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .encouragement {
+            font-size: 19px;
+            color: #1a1a1a;
+            margin-bottom: 40px;
+            font-style: italic;
+            font-weight: 500;
+            text-align: left;
+        }
+
+        .button-container {
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .btn {
+            background-color: #000;
+            color: white;
+            padding: 18px 42px;
+            border: none;
+            border-radius: 6px;
+            font-size: 17px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.2s;
+            letter-spacing: 0.3px;
+        }
+
+        .btn:hover {
+            background-color: #333;
+        }
+
+        .footer-note {
+            font-size: 12px;
+            color: #999;
+            line-height: 1.7;
+            text-align: left;
+        }
+
+        .footer-note a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .footer-note a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">Onelarity</div>
+        <div class="banner">
+            <img src="http://res.cloudinary.com/dlycinwrl/image/upload/v1760695128/asdife2b5lvmia4rtwzx.png"
+                alt="Solution Accepted Banner" />
+        </div>
+        <div class="greeting">Hey {{submitterName}},</div>
+        <div class="content">
+            We're excited to let you know that your solution has been <b>ACCEPTED</b>!
+        </div>
+        <div class="content">
+            <b>Solution:</b> "{{solutionTitle}}"<br>
+            <b>For problem:</b> "{{problemTitle}}"<br><br>
+            Your contribution is now part of the Onelarity community knowledge base — thank you for making clarity
+            accessible to more teams.
+        </div>
+        <div class="encouragement">
+            Great work. Keep sharing your insights — the community needs more contributors like you.
+        </div>
+        <div class="button-container">
+            <a href="https://oneclarity.ai/" class="btn">Explore Accepted Solutions</a>
+        </div>
+        <div class="footer-note">
+            If the button doesn't work, copy and paste this link:<br>
+            <a href="https://oneclarity.ai//">https://oneclarity.ai/</a><br><br>
+            – The Onelarity Team
+        </div>
+    </div>
+</body>
+
+</html>
