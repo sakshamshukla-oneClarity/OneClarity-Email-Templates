@@ -2,9 +2,21 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>OneClarity Email Templates Preview</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/public/OneClarity.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title translate="no">OneClarity</title>
+    <meta name="description" content="OneClarity" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <meta property="og:title" content="OneClarity" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" />
+    <meta name="google-site-verification" content="2q7FmWFCzXHf-oQTLysqeCX-cKJlDFW8HOQq6gnpRsA" />
     <style>
         :root {
             --bg: #fff;
@@ -22,13 +34,17 @@
             color: var(--fg);
             padding: 2rem;
             -webkit-font-smoothing: antialiased;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         .container {
             max-width: 1100px;
             margin: 0 auto;
+            flex: 1;
+            width: 100%;
         }
-
 
         nav.navbar {
             display: flex;
@@ -49,7 +65,6 @@
             font-size: 1rem;
             padding-left: 0.5rem;
         }
-
 
         ul.menu {
             list-style: none;
@@ -105,7 +120,6 @@
             box-shadow: inset 0 0 0 1px var(--fg);
         }
 
-
         button.menu-toggle {
             display: block;
             background: transparent;
@@ -122,7 +136,6 @@
             background: var(--fg);
             color: var(--bg);
         }
-
 
         button.hamburger {
             display: none;
@@ -142,7 +155,6 @@
             transition: transform .18s ease, opacity .18s ease;
         }
 
-
         @media (max-width: 720px) {
             nav.navbar {
                 padding: 0.4rem 0.6rem;
@@ -157,7 +169,6 @@
             }
         }
 
-
         @media (min-width: 721px) {
             ul.menu {
                 right: auto;
@@ -167,13 +178,11 @@
             }
         }
 
-
         a:focus,
         button:focus {
             outline: 3px solid var(--fg);
             outline-offset: 4px;
         }
-
 
         main {
             margin-top: 1.5rem;
@@ -207,6 +216,75 @@
             background: #fff;
             line-height: 1.2;
             vertical-align: middle;
+        }
+
+        /* Footer */
+        footer {
+            max-width: 1100px;
+            margin: 2rem auto 0;
+            width: 100%;
+            border-top: 1px solid #e2e8f0;
+            padding: 1.5rem 0 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-brand {
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.2px;
+        }
+
+        .footer-dev {
+            font-size: 0.85rem;
+            color: #444;
+            text-align: center;
+        }
+
+        .footer-dev span {
+            font-weight: 600;
+            color: #000;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .footer-links a {
+            font-size: 0.85rem;
+            color: #000;
+            text-decoration: none;
+            border: 1px solid #000;
+            padding: 0.3rem 0.75rem;
+            border-radius: 999px;
+            transition: background .18s ease, color .18s ease;
+        }
+
+        .footer-links a:hover {
+            background: #000;
+            color: #fff;
+        }
+
+        .footer-copy {
+            font-size: 0.78rem;
+            color: #999;
+            text-align: center;
+            width: 100%;
+            padding-top: 1rem;
+            border-top: 1px solid #f0f0f0;
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 600px) {
+            footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
@@ -267,6 +345,23 @@
             <p>Select a template from the menu above to preview it.</p>
         </main>
     </div>
+
+
+    <footer>
+        <div class="footer-brand">OneClarity</div>
+        <div class="footer-dev">
+            Built by <span>Saksham Shukla</span>
+        </div>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/saksham-shukla-9758602a6" target="_blank" rel="noopener noreferrer">
+                LinkedIn
+            </a>
+            <a href="https://github.com/sakshamshukla-oneClarity" target="_blank" rel="noopener noreferrer">
+                GitHub
+            </a>
+        </div>
+        <div class="footer-copy">© 2026 OneClarity. All rights reserved.</div>
+    </footer>
 
     <script>
         (function () {
